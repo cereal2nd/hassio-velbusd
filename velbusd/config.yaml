@@ -10,5 +10,6 @@ arch:
   - armv7
   - i386
 startup: services
+host_network: true
 ports:
   27015/tcp: 27015
