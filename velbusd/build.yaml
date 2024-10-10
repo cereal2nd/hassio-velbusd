@@ -1,0 +1,16 @@
+image: cereal2nd/velbusd
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base-python:"
+  armv7: "ghcr.io/home-assistant/armv7-base-python:"
+  armhf: "ghcr.io/home-assistant/armhf-base-python:"
+  amd64: "ghcr.io/home-assistant/amd64-base-python:"
+  i386: "ghcr.io/home-assistant/i386-base-python:"
+cosign:
+  base_identity: https://github.com/home-assistant/docker-base/.*
+  identity: https://github.com/home-assistant/docker-base/.*
+labels:
+  io.hass.base.name: velbusd
+  org.opencontainers.image.source: https://github.com/cereal2nd/hassio-velbusd
+codenotary:
+  base_image: notary@home-assistant.io
+  signer: maikel.punie@gmail.com

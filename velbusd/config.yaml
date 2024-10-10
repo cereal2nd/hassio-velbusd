@@ -13,3 +13,22 @@ startup: services
 host_network: true
 ports:
   27015/tcp: 27015
+options:
+  auth:
+    enabled: true
+    synctime: "03:00"
+  serial:
+    autodiscover: true
+    port: ""
+  logging:
+    type: "debug"
+schema:
+  auth:
+    enabled: bool
+    synctime: match(^[0-2][0-9]:[0-5][0-9]$)
+  serial:
+    autodiscover: bool
+    port: ""
+  logging:
+    type: list(trace|debug|info|notice|warning|error|fatal)?  
+  
