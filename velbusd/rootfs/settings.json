@@ -1,7 +1,7 @@
 {
 	"ntp":
 	{
-		"enabled": false,
+		"enabled": true,
 		"synctime": "03:00"
 	},
 	"connections": 
@@ -19,7 +19,7 @@
 	],
 	"serial": {
 		"autodiscover": true,
-		"port": "/dev/ttyACM0"
+		"port": ""
 	},
 	"logging": {
 		"type": "debug",
