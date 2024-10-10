@@ -11,7 +11,7 @@ arch:
   - i386
 startup: services
 host_network: true
-watchdog: tcp://[HOST]:[PORT]
+watchdog: tcp://[HOST]:[PORT:27015]
 ports:
   27015/tcp: 27015
 options:
