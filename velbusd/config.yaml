@@ -16,14 +16,8 @@ ports:
   27015/tcp: 27015
 options:
   ntp: true
-  serial:
-    autodiscover: true
-    port: ""
   logging: "debug"
 schema:
   ntp: bool
-  serial:
-    autodiscover: bool
-    port: str
   logging: list(trace|debug|info|notice|warning|error|fatal)?  
   
