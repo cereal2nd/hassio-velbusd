@@ -1,0 +1,19 @@
+name: VelbusD
+version: "0.0.1"
+slug: VelbusD
+description: Addong to bridge a velbus serial device to the network
+url: "https://github.com/Cereal2nd/hassio-velbus"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+map:
+  - share:rw
+options:
+  message: "Hello world..."
+schema:
+  message: "str?"
+image: "ghcr.io/home-assistant/{arch}-addon-example"
