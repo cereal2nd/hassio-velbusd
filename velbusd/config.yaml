@@ -11,24 +11,19 @@ arch:
   - i386
 startup: services
 host_network: true
+watchdog: tcp://[HOST]:[PORT]
 ports:
   27015/tcp: 27015
 options:
-  auth:
-    enabled: true
-    synctime: "03:00"
-  serial:
+  ntp: true
+  serial: str
     autodiscover: true
     port: ""
-  logging:
-    type: "debug"
+  logging: "debug"
 schema:
-  auth:
-    enabled: bool
-    synctime: match(^[0-2][0-9]:[0-5][0-9]$)
+  ntp: bool
   serial:
     autodiscover: bool
     port: str
-  logging:
-    type: list(trace|debug|info|notice|warning|error|fatal)?  
+  logging: list(trace|debug|info|notice|warning|error|fatal)?  
   
