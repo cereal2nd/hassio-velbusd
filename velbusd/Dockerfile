@@ -1,7 +1,6 @@
-FROM ghcr.io/home-assistant/aarch64-base-python:latest
+ARG BUILD_FROM
+FROM ${BUILD_FROM}
 
-RUN apk list -I | cut -f1 -d' ' | sed -e 's/-r\d\+$//'| sed -e 's/\(.*\)-/\1 /'
-#RUN apk add --no-cache python3 git py3-wheel py3-pip py3-pyserial py3-typing-extensions
 RUN apk add --no-cache git py3-wheel py3-pip py3-pyserial py3-typing-extensions
 
 # extract
