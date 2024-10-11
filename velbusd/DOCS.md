@@ -1,10 +1,7 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: VelbusD
 
 ## How to use
 
-This add-on really does nothing. It is just an example.
+This add-on will create a network bridge from you velbus serial device.
 
-When started it will print the configured message or "Hello world" in the log.
-
-It will also print "All done!" in `/share/example_addon_output.txt` to show
-simple example of the usage of `map` in addon config.
+It will connect to you velbus serial port and will generate a tcp socket that can be used by home-assistant and velbusLink
