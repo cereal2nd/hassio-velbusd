@@ -3,9 +3,5 @@
 # ==============================================================================
 # Runs velbusd
 # ==============================================================================
-declare configuration_file
-
-configuration_file="/settings.json"
-
 bashio::log.info "Starting VelbusD..."
-exec python3 -m velbustcp --settings $(configuration_file)
+exec python3 -m velbustcp --settings /settings.json
