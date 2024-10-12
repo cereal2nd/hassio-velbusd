@@ -19,7 +19,7 @@ options:
   ntp: true
   logging: "debug"
 schema:
-  velbus: device()
+  velbus: device(subsystem=usb)
   ntp: bool
   logging: list(trace|debug|info|notice|warning|error|fatal)?  
   
