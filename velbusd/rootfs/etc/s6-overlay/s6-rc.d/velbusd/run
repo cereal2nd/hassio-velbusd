@@ -6,22 +6,22 @@
 
 # set velbus port
 bashio::config.require 'velbus'
-jq ".serial.autodiscover=false" settings.json > /tmp/set
+jq ".serial.autodiscover=false" /settings.json > /tmp/set
 cp /tmp/set /settings.json
-jq ".serial.port=$(bashio::config 'velbus')" settings.json > /tmp/set
+jq ".serial.port=$(bashio::config 'velbus')" /settings.json > /tmp/set
 cp /tmp/set /settings.json
 
 # set log level
 bashio::config.require 'logging'
-jq ".logging.type=$(bashio::config 'logging')" settings.json > /tmp/set
+jq ".logging.type=$(bashio::config 'logging')" /settings.json > /tmp/set
 cp /tmp/set /settings.json
 
 # enable/disable ntp
 bashio::config.require 'ntp'
 if bashio::config.true 'ntp'; then
-     jq ".ntp.enabled=true" settings.json > /tmp/set
+     jq ".ntp.enabled=true" /settings.json > /tmp/set
 else
-     jq ".ntp.enabled=false" settings.json > /tmp/set
+     jq ".ntp.enabled=false" /settings.json > /tmp/set
 fi
 cp /tmp/set /settings.json
 
