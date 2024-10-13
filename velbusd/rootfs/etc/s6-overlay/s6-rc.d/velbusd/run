@@ -38,4 +38,4 @@ jq -n '{
 
 # starting
 bashio::log.info "Starting VelbusD..."
-exec python3 -m velbus --settings /settings.json
+exec python3 -m velbustcp --settings /settings.json
