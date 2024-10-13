@@ -8,7 +8,7 @@ bashio::log.info "Building configfile..."
 bashio::log.info "ntp $(bashio::config 'ntp')"
 bashio::log.info "logging $(bashio::config 'logging')"
 bashio::log.info "velbus $(bashio::config 'velbus')"
-bashio::log.info "port $(bashio::addon.port)"
+bashio::log.info "port $(bashio::addon.port 27015)"
 bashio::log.info "auth $(bashio::config 'auth')"
 bashio::log.info "authkey $(bashio::config 'authkey')"
 jq -n '{
@@ -40,7 +40,7 @@ jq -n '{
   --arg ntp $(bashio::config 'ntp') \
   --arg logging $(bashio::config 'logging') \
   --arg velbus $(bashio::config 'velbus') \
-  --arg port $(bashio::addon.port) \
+  --arg port $(bashio::addon.port 27015) \
   --arg auth $(bashio::config 'auth') \
   --arg authkey "$(bashio::config 'authkey')" \
 > /settings.json
