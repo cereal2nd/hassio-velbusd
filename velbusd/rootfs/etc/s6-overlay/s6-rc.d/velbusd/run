@@ -13,13 +13,13 @@ jq -n '{
   "connections": [
     {
       "host": "0.0.0.0",
-      "port": 27015,
+      "port": $port,
       "relay": true,
       "ssl": false,
       "cert": "",
       "pk": "",
-      "auth": false,
-      "auth_key": ""
+      "auth": $auth,
+      "auth_key": $auth_key
     }
   ],
   "serial": {
@@ -34,6 +34,9 @@ jq -n '{
   --arg ntp $(bashio::config 'ntp') \
   --arg logging $(bashio::config 'logging') \
   --arg velbus $(bashio::config 'velbus') \
+  --arg port $(bashio::addon.port) \
+  --arg auth $(bashio::config 'auth') \
+  --arg auth_key $(bashio::config 'auth_key') \
 > /settings.json
 
 
