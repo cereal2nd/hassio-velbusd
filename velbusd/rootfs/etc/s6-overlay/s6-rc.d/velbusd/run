@@ -24,7 +24,7 @@ jq -n '{
   ],
   "serial": {
     "autodiscover": false,
-    "port": ""
+    "port": $velbus
   },
   "logging": {
     "type": $logging,
@@ -33,6 +33,7 @@ jq -n '{
 }' \
   --arg ntp $(bashio::config 'ntp') \
   --arg logging $(bashio::config 'logging') \
+  --arg velbus $(bashio::config 'velbus') \
 > /settings.json
 
 
