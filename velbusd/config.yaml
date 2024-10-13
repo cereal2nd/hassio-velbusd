@@ -1,6 +1,6 @@
 name: "Velbus serial to TCP interface"
 description: "This addon will make a TCP server from a serial device, this allows hassio and velbuslink to work simultanious on the bus"
-version: "0.1.8"
+version: "0.1.9"
 slug: "velbusd"
 init: false
 url: https://github.com/Cereal2nd/hassio-velbusd
@@ -20,7 +20,7 @@ ports_description:
 options:
   velbus: ""
   auth: false
-  auth_key: ""
+  authkey: ""
   ntp: true
   logging: "debug"
 schema:
