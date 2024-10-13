@@ -13,18 +13,18 @@ bashio::log.info "auth $(bashio::config 'auth')"
 bashio::log.info "authkey $(bashio::config 'authkey')"
 jq -n '{
   "ntp": {
-    "enabled": $ntp,
+    "enabled": $ntp | test("true"),
     "synctime": "03:00"
   },
   "connections": [
     {
       "host": "0.0.0.0",
-      "port": $port,
+      "port": $port | tonumber,
       "relay": true,
       "ssl": false,
       "cert": "",
       "pk": "",
-      "auth": $auth,
+      "auth": $auth | test("true"),
       "auth_key": $authkey
     }
   ],
