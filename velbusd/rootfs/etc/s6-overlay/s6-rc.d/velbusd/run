@@ -19,7 +19,7 @@ jq -n '{
       "cert": "",
       "pk": "",
       "auth": $auth,
-      "auth_key": $auth_key
+      "auth_key": $authkey
     }
   ],
   "serial": {
@@ -36,7 +36,7 @@ jq -n '{
   --arg velbus $(bashio::config 'velbus') \
   --arg port $(bashio::addon.port) \
   --arg auth $(bashio::config 'auth') \
-  --arg auth_key $(bashio::config 'auth_key') \
+  --arg authkey $(bashio::config 'authkey') \
 > /settings.json
 
 
