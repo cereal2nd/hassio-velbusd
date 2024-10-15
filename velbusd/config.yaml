@@ -3,6 +3,7 @@ description: "This addon will make a TCP server from a serial device, this allow
 version: "0.1.14"
 slug: "velbusd"
 init: false
+apparmor: false
 url: https://github.com/Cereal2nd/hassio-velbusd
 arch:
   - aarch64
