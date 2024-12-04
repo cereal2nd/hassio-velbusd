@@ -30,4 +30,3 @@ schema:
   authkey: str?
   ntp: bool
   logging: list(debug|info)
-  
