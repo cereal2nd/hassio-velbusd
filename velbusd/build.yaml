@@ -1,3 +1,4 @@
+---
 image: cereal2nd/hass-velbusd
 build_from:
   aarch64: "ghcr.io/home-assistant/aarch64-base-python:latest"
