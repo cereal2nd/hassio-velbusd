@@ -13,6 +13,6 @@ on:
 
 jobs:
   workflows:
-    uses: hassio-addons/workflows/.github/workflows/workflows-ci.yaml@main
+    uses: hassio-addons/workflows/.github/workflows/addon-ci.yaml@main
     secrets:
       DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
