@@ -2,8 +2,14 @@ name: Deploy docker image
 
 on:
   workflow_dispatch:
-  push:
-  pull_request:
+  release:
+    types:
+      - published
+  workflow_run:
+    workflows: ["CI"]
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   workflows:
