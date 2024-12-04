@@ -5,7 +5,9 @@ RUN apk add --no-cache git py3-wheel py3-pip py3-pyserial py3-typing-extensions
 
 # extract
 RUN git clone https://github.com/velbus/python-velbustcp.git velbus
-RUN cd /velbus && pip install .
+WORKDIR /velbus
+RUN pip install --no-cache-dir .
+WORKDIR /
 RUN rm -rf velbus
 
 # Coppy rootfs
