@@ -1,4 +1,4 @@
-name: Deploy docker image
+name: Lint
 
 on:
   workflow_dispatch:
